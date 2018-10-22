@@ -1,12 +1,12 @@
 const express = require('express'),
-	app = express(),
-	bodyParser = require('body-parser'),
-	cookieParser = require('cookie-parser'),
-	methodOverride = require('method-override'),
-	router = express.Router(),
-	path = require('path'),
-	authors = require('./server/controllers/authors'),
-	books = require('./server/controllers/books');
+    app = express(),
+    bodyParser = require('body-parser'),
+    cookieParser = require('cookie-parser'),
+    methodOverride = require('method-override'),
+    router = express.Router(),
+    path = require('path'),
+    authors = require('./server/controllers/authors'),
+    books = require('./server/controllers/books');
 
 // express config
 app.use(bodyParser.json());
@@ -37,6 +37,6 @@ app.use('/api', router);
 require('./server/seeders');
 
 // start server
-app.listen(app.get('port'), function () {
-  console.log("Server started on port", app.get('port'));
+app.listen(app.get('port'), function() {
+    console.log("Server started on port", app.get('port'));
 });
